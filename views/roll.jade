@@ -1,0 +1,13 @@
+div.row(ng-init="GetBasicData()")
+	div.col-xs-4.col-sm-4.col-md-4.col-lg-4 已登录人数:{{LoginCount.yes}}
+	div.col-xs-4.col-sm-4.col-md-4.col-lg-4 未登录人数:{{LoginCount.no}}
+	div.col-xs-4.col-sm-4.col-md-4.col-lg-4 班級總人数:{{LoginCount.all}}
+div.row
+	div.col-xs-12.col-sm-12.col-md-12.col-lg-12
+		select.form-control(ng-model="myCourses",ng-options="course.Name for course in Courses",ng-change="GetRollData(myCourses)")
+			option(label="請選擇要點名的課程")
+div.row
+	div.col-xs-4.col-sm-2.col-md-1.col-lg-1.person(ng-repeat="student in Students",id="{{student.account}}")
+		img(src="/images/default.png")
+		div.name(class="brand-{{student.status}}") {{student.Name}}
+		p {{student.account}}

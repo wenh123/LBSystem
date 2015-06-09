@@ -1,0 +1,11 @@
+div.form-group
+	label Test Login
+	input#m.form-control(type="text",ng-model="person.TextAccount")
+	input.btn.btn-lg.btn-default.btn-block(type="button",onclick="emit()" value="login")
+	input.btn.btn-lg.btn-default.btn-block(type="button",onclick="emit2()" value="logout")
+div.form-group
+	label Select A Correct Answer
+	input.btn.btn-lg.btn-default.btn-block(type="button",ng-repeat="answer in AnswerCounter",ng-value="answer",ng-click="emit3(answer)")
+
+
+ul#broadcast

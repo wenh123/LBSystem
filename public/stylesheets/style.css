@@ -1,0 +1,129 @@
+/*
+@brand-primary: darken(#428bca, 6.5%); 
+@brand-success: #5cb85c;
+@brand-info:    #5bc0de;
+@brand-warning: #f0ad4e;
+@brand-danger:  #d9534f;
+*/
+
+.brand-primary{
+	background-color: #428bca;
+}
+
+.brand-1{
+	background-color: #5cb85c;
+}
+
+.brand-info{
+	background-color: #5bc0de;
+}
+
+.brand-0{
+	background-color: #f0ad4e;
+}
+
+.brand-2{
+	background-color: #d9534f;
+}
+
+body {
+  padding: 0;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+h1{padding: 0;margin: 0}
+
+.navbar-header .navbar-brand{
+	color: #6f5499;
+}
+
+.lbs-nav .navbar-toggle{
+	position: relative;
+	float: right;
+	background-color: transparent;
+	background-image: none;
+	border: 1px solid transparent;
+	border-radius: 4px;
+}
+
+.lbs-nav .navbar-toggle .icon-bar{
+	background-color:#563d7c;
+}
+
+.lbs-header{
+	background: #6f5499;
+	color: #fff
+}
+
+.lbs-content{
+	width: 100%;padding-right: 15px;padding-left: 15px;
+}
+
+.lbs-content .row{
+	margin: 20px 0 10px 0;
+}
+
+.lbs-content .row .person{
+	padding:0 10px;
+}
+
+.lbs-content .row .person img{
+	width: 100%;
+}
+
+.lbs-content .row .person .name{
+	width:100%;
+	text-align: center;
+	height: 28px;
+	line-height: 28px;
+	color: #fff;
+	margin: 8px 0;
+}
+
+.lbs-content .row .person .title{
+	width:100%;
+	text-align: center;
+	height: 34px;
+	line-height: 34px;
+	color: #fff;
+	margin: 8px 0 0 0;
+}
+
+.lbs-content .row .person p{
+	width: 100%;
+	text-align: center;
+	margin-bottom: 10px;
+}
+
+.lbs-content .row .beacons{
+	background-color: #f5f5f5;
+	text-align: center;
+}
+
+.lbs-content .row .beacons table{
+	width: 100%;
+}
+
+.lbs-content .row .beacons table td{
+	padding: 5px 0;
+}
+
+.form-signin{
+	width: 330px;
+	margin: 10px auto;
+}
+
+.form-control{
+	display: block;
+	width: 100%;
+	height: 34px;
+	padding: 6px 12px;
+	font-size: 14px;
+	line-height: 1.42857143;
+	color: #555;
+	background-color: #fff;
+	background-image: none;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+	margin: 15px 0;
+}

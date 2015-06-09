@@ -1,0 +1,11 @@
+div.container(ng-init="GetCourseList()")
+	div.row
+		div.col-xs-12.col-sm-12.col-md-12.col-lg-12.person
+			form(ng-submit="AddStudents()",enctype="multipart/form-data")
+				div.form-group
+					label Select Course
+					select.form-control(ng-model="CourseModel",ng-options="course.Name for course in CourseList")
+				div.form-group
+					label Select File
+						input(type="file",ngf-select,ng-model="files",ngf-multiple="multiple")
+				button.btn.btn-default(type="submit") Save

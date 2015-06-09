@@ -1,0 +1,25 @@
+div.form-group
+	label Create a question
+	input.btn.btn-lg.btn-default.btn-block(type="button",data-toggle="modal",data-target="#Create_Question",ng-click="OpenQuestion()",value="Create")
+	div#chartContainer(style="height: 300px; width: 100%; margin-top:20px;")
+div.form-group
+	label {{QuestionNewInfo.name}}
+	table.table.table-striped
+		tr(ng-repeat="answer in Answer")
+			td {{answer.label}}
+			td {{answer.y}}
+div#Create_Question.modal.fade(tabindex="-1",role="dialog",aria-hidden="true")
+	div.modal-dialog.modal-md
+		div.modal-content
+			form(ng-submit="CreateQuestion()")
+				div.modal-header Create New Question
+					div.modal-body
+						div.form-group
+							label Question Name
+								input.form-control(type="text",placeholder="Name",ng-model="QuestionNewInfo.name",ng-value="QuestionNewInfo.name")
+							div.form-group
+								label Select Number of Answer 
+								select.form-control(ng-model="QuestionNewInfo.quantity",ng-options="answer for answer in AnswerModel.quantity")
+						div.modal-footer
+							button.btn.btn-default(type="button",data-dismiss="modal") Close
+							button.btn.btn-primary(type="submit") Save

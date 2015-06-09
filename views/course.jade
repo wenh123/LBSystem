@@ -1,0 +1,31 @@
+div.container(ng-init="GetCourseList()")
+	div.row
+		div.col-xs-12.col-sm-12.col-md-6.col-lg-6.person(ng-repeat="course in CourseList")
+			div.title.brand-info {{course.Name}}
+				span.brand-2.pull-right.btn(ng-click="RemoveCourse($index)") X
+			div.beacons(ng-repeat="beacon in course.beacons")
+				table
+					tr
+						td(width="80") UUID
+						td {{beacon.uuid}}
+					tr
+						td Major
+						td {{beacon.major}}
+					tr
+						td Minor
+						td {{beacon.minor}}
+	div.row
+		button.btn.btn-primary(type="button",data-toggle="modal",data-target="#Add_Modal") Add New Course
+		div#Add_Modal.modal.fade(tabindex="-1",role="dialog",aria-hidden="true")
+			div.modal-dialog.modal-md
+				div.modal-content
+					form(ng-submit="AddCourse()")
+						div.modal-header Add New Courses
+						div.modal-body
+							input.form-control(type="text",placeholder="Name",ng-model="CourseNewInfo.name")
+							input.form-control(type="text",placeholder="Uuid",ng-model="CourseNewInfo.uuid")
+							input.form-control(type="text",placeholder="Major",ng-model="CourseNewInfo.major")
+							input.form-control(type="text",placeholder="Minor",ng-model="CourseNewInfo.minor")
+						div.modal-footer
+							button.btn.btn-default(type="button",data-dismiss="modal") Close
+							button.btn.btn-primary(type="submit") Save

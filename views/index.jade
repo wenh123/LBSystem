@@ -1,0 +1,9 @@
+extends header
+block content
+	div#content.lbs-header(tabindex="-1")
+		div.container
+			h1 #{title}
+			p 這是一個讓你上課不能滑手機的系統，除非你買兩個，我就沒辦法
+	div.lbs-content
+		div.view-animate-container
+			div.view-animate(ng-view)
